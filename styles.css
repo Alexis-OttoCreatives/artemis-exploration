@@ -966,7 +966,7 @@ h1, h2, p { margin: 0; }
 /* Finale: pinned stage, the photo wall zooms out and fades, the download block appears */
 .finale {
   position: relative;
-  height: 320vh; /* scroll distance for the zoom-out */
+  height: 400vh; /* scroll distance: photos appear, zoom out, hand over */
 }
 .finale__end { /* "#download" lands where the download block is fully revealed */
   position: absolute;
@@ -980,12 +980,12 @@ h1, h2, p { margin: 0; }
   overflow: hidden;
 }
 .finale__wall {
-  --tile: 14vw;
+  --tile: 9.5vw;
   position: absolute;
   top: 50%;
   left: 50%;
   display: grid;
-  grid-template-columns: repeat(7, var(--tile));
+  grid-template-columns: repeat(11, var(--tile));
   gap: 8px;
   /* --s / --o are driven by finale.js */
   transform: translate(-50%, -50%) scale(var(--s, 1.15));
@@ -1000,6 +1000,9 @@ h1, h2, p { margin: 0; }
   corner-shape: squircle;
   overflow: hidden;
   background: #eee;
+  /* --a (0 → 1) is set per tile by finale.js as the photos appear */
+  opacity: var(--a, 1);
+  transform: scale(calc(.9 + var(--a, 1) * .1));
 }
 .finale__tile img { width: 100%; height: 100%; object-fit: cover; }
 .finale__tile--brand { background: linear-gradient(160deg, #ff3a45, var(--red) 45%, #d90816); }
@@ -1016,7 +1019,7 @@ h1, h2, p { margin: 0; }
 }
 .finale.is-revealed .closing { pointer-events: auto; }
 @media (max-width: 700px) {
-  .finale__wall { --tile: 30vw; grid-template-columns: repeat(7, var(--tile)); }
+  .finale__wall { --tile: 22vw; }
 }
 @media (prefers-reduced-motion: reduce) {
   .finale { height: auto; }
