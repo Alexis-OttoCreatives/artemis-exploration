@@ -5,6 +5,8 @@
   --grey: #7e7e7e;
   --white: #fff;
   --gutter: clamp(16px, 3.33vw, 64px);
+  --section-space: clamp(128px, 13.3vw, 256px); /* space between sections */
+  --content-space: clamp(72px, 8.33vw, 120px);   /* intro text → section visual: 120px from 1440px up */
 }
 
 *,
@@ -208,7 +210,7 @@ h1, h2, p { margin: 0; }
 
 /* Plans section */
 .plans {
-  padding: clamp(96px, 10.4vw, 200px) var(--gutter) 0;
+  padding: var(--section-space) var(--gutter) 0;
   text-align: center;
 }
 .plans__intro {
@@ -238,7 +240,7 @@ h1, h2, p { margin: 0; }
   align-items: center;
   gap: calc(var(--q) * .667); /* Figma: 48px rows on an 80px pitch */
   width: fit-content;
-  margin: clamp(96px, 10.4vw, 200px) auto 0;
+  margin: var(--content-space) auto 0;
 }
 .plans__questions li {
   font-size: var(--q);
@@ -316,7 +318,7 @@ h1, h2, p { margin: 0; }
 
 /* Services */
 .services {
-  padding: clamp(96px, 10.4vw, 200px) var(--gutter);
+  padding: var(--section-space) var(--gutter);
 }
 .services__eyebrow {
   font-size: clamp(18px, 1.25vw, 24px);
@@ -329,7 +331,7 @@ h1, h2, p { margin: 0; }
   display: flex;
   gap: 8px;
   height: max(480px, 90vh);
-  margin-top: 24px;
+  margin-top: var(--content-space);
 }
 /* Figma: 637.5 / 637.5 / 469 on a 1792 row */
 .services__list li {
@@ -458,11 +460,11 @@ h1, h2, p { margin: 0; }
 
 .platform,
 .stories {
-  padding: 0 var(--gutter) clamp(96px, 10.4vw, 200px);
+  padding: 0 var(--gutter) var(--section-space);
   text-align: center;
 }
 .platform .plans__intro,
-.stories .plans__intro { margin-bottom: clamp(48px, 4.17vw, 80px); }
+.stories .plans__intro { margin-bottom: var(--content-space); }
 
 /* Bento grid */
 .bento {
@@ -790,7 +792,7 @@ h1, h2, p { margin: 0; }
 .dock {
   --open: 600px; /* set by dock.js */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* portraits hang from the top, so the gap above them is exact */
   justify-content: center;
   gap: 8px;
   height: 600px; /* set by dock.js to the tallest state, so the page never jumps */
