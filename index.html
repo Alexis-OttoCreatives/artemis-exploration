@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" /> <!-- design concept: keep it out of search engines -->
+  <title>Poppy website concept · Otto Creatives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="concept-label">Design concept by Otto Creatives · Not the official Poppy website</p>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <header class="header">
+      <div class="header__origin" style="--d:0">
+        <span>Made in</span>
+        <span class="flag" role="img" aria-label="Belgian flag"><i></i><i></i><i></i></span>
+        <strong>Belgium</strong>
+      </div>
+
+      <nav class="header__center" aria-label="Main">
+        <ul class="nav">
+          <li style="--d:1"><a href="#">Lease</a></li>
+          <li style="--d:2"><a href="#">Share</a></li>
+          <li style="--d:3"><a href="#">Taxi</a></li>
+        </ul>
+        <a class="logo" href="#top" aria-label="Poppy, back to top">
+          <img src="assets/logo.svg" alt="Poppy" width="103" height="22" />
+        </a>
+        <ul class="nav">
+          <li style="--d:4"><a href="#">Business customers</a></li>
+          <li style="--d:5"><a href="#">Help</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--sm header__cta" href="#" style="--d:6">Download the app</a>
+    </header>
+
+    <div class="hero__content">
+      <h1 class="hero__title"><span class="line"><span style="--d:0">The best alternative</span></span><span class="line"><span style="--d:1">to owning a car.</span></span></h1>
+      <div class="hero__bottom">
+        <a class="btn btn--lg" href="#" style="--d:0">Make the change</a>
+        <div class="social-proof" style="--d:1">
+          <div class="avatars" aria-hidden="true">
+            <img src="assets/avatar-1.png" alt="" />
+            <img src="assets/avatar-2.png" alt="" />
+            <img src="assets/avatar-3.png" alt="" />
+          </div>
+          <span>Used by 200k+ Belgians</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A car for every plan -->
+  <section class="plans">
+    <div class="plans__intro">
+      <h2 class="plans__title">A car for every plan, big or small.</h2>
+      <p class="plans__lead">Hop into a shared car for 15 minutes or a whole weekend, or lease one to call your own. And when you’d rather not drive, we’ll send a taxi.</p>
+    </div>
+
+    <!-- Each row: data-image + data-caption feed the floating reveal (reveal.js).
+         Four photos for six rows, so market + driver are used twice (never on neighbouring rows). -->
+    <ul class="plans__questions" data-reveal>
+      <li data-image="assets/market.jpg" data-caption="1 hour, 12 km">New plant, no way to get it home?</li>
+      <li data-image="assets/driver.jpg" data-caption="Leased, 24 months">New job, longer commute?</li>
+      <li data-image="assets/picnic.jpg" data-caption="14 days, 2,100 km">2 weeks in France?</li>
+      <li data-image="assets/market.jpg" data-caption="30 min, 8 km">Quick ride to your friends?</li>
+      <li data-image="assets/camping.jpg" data-caption="2 days, 250 km">2 nights camping?</li>
+      <li data-image="assets/driver.jpg" data-caption="Taxi, 5:00 am">Flight at 6am?</li>
+    </ul>
+  </section>
+
+  <!-- Services -->
+  <section class="services" aria-labelledby="services-title">
+    <h2 class="services__eyebrow" id="services-title">There’s a Poppy for that</h2>
+
+    <ul class="services__list">
+      <li>
+        <a class="service" href="#">
+          <img class="service__img" src="assets/service-share.jpg" alt="" />
+          <span class="service__tag" aria-hidden="true">Poppy Share</span>
+          <span class="service__glare" aria-hidden="true"></span>
+          <span class="service__btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
+          </span>
+          <span class="service__text">
+            <span class="service__name">Poppy Share</span>
+            <span class="service__title">Yours for a minute, or a weekend</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="service" href="#">
+          <img class="service__img" src="assets/service-lease.jpg" alt="" />
+          <span class="service__tag" aria-hidden="true">Poppy Lease</span>
+          <span class="service__glare" aria-hidden="true"></span>
+          <span class="service__btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
+          </span>
+          <span class="service__text">
+            <span class="service__name">Poppy Lease</span>
+            <span class="service__title">Your own car, without owning it</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="service" href="#">
+          <img class="service__img" src="assets/service-taxi.jpg" alt="" />
+          <span class="service__tag" aria-hidden="true">Poppy Taxi</span>
+          <span class="service__glare" aria-hidden="true"></span>
+          <span class="service__btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
+          </span>
+          <span class="service__text">
+            <span class="service__name">Poppy Taxi</span>
+            <span class="service__title">No Parking, no problem</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Platform: proof for modernity + service -->
+  <section class="platform" aria-labelledby="platform-title">
+    <div class="plans__intro">
+      <h2 class="plans__title" id="platform-title">Built like an app,<br />not a rental desk.</h2>
+      <p class="plans__lead">No keys, no counters, no paperwork. Everything happens on your phone, and real people are there when you need them.</p>
+    </div>
+
+    <ul class="bento">
+      <!-- Map + zones -->
+      <li class="bento__cell bento__cell--big">
+        <div class="bento__visual map" aria-hidden="true">
+          <!-- Car marker (Figma 231:1937): the red ring shows the battery level, set per marker with --b (0–100) -->
+          <svg width="0" height="0" class="sr-defs">
+            <defs>
+              <filter id="marker-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dy="2" stdDeviation="2" flood-opacity=".1"/></filter>
+              <symbol id="marker" viewBox="0 0 46 53">
+                <path filter="url(#marker-shadow)" fill="#fff" d="M42 21a18.9 18.9 0 0 1-5.6 13.5L25.8 45a4 4 0 0 1-5.6 0L9.6 34.5A19 19 0 1 1 42 21Z"/>
+                <circle class="marker__ring" cx="23" cy="21" r="18" pathLength="100" transform="rotate(-90 23 21)" fill="none" stroke="#fc0d1b" stroke-width="2"/>
+                <circle cx="23" cy="21" r="17" fill="#fff"/>
+                <path fill="#0b0b0b" fill-rule="evenodd" d="M19.4224 14C18.2127 14 17.1213 14.7265 16.6546 15.8426L15.2999 19.0821C13.9807 19.3975 13 20.5842 13 22V24.3219C13 25.6213 13.9254 26.7045 15.1531 26.9486C15.55 28.1405 16.6746 29 18 29C19.3062 29 20.4175 28.1652 20.8293 27H24.1707C24.5825 28.1652 25.6938 29 27 29C28.3062 29 29.4175 28.1652 29.8293 27H30C31.6569 27 33 25.6569 33 24V23C33 20.7909 31.2091 19 29 19H28.5018L25.6743 15.207C25.1081 14.4475 24.2164 14 23.2691 14H19.4224ZM29 21C30.1046 21 31 21.8954 31 23V24C31 24.5523 30.5523 25 30 25H29.8293C29.4175 23.8348 28.3062 23 27 23C25.6938 23 24.5825 23.8348 24.1707 25H20.8293C20.4175 23.8348 19.3062 23 18 23C16.7563 23 15.6894 23.7568 15.2346 24.8349C15.0909 24.7106 15 24.5269 15 24.3219V22C15 21.4477 15.4477 21 16 21H29ZM20 19V16H19.4224C19.0191 16 18.6554 16.2422 18.4998 16.6142L17.5021 19H20ZM22 19H26.0073L24.0708 16.4023C23.8821 16.1492 23.5849 16 23.2691 16H22V19ZM18 25C18.5523 25 19 25.4477 19 26C19 26.5523 18.5523 27 18 27C17.4477 27 17 26.5523 17 26C17 25.4477 17.4477 25 18 25ZM26 26C26 25.4477 26.4477 25 27 25C27.5523 25 28 25.4477 28 26C28 26.5523 27.5523 27 27 27C26.4477 27 26 26.5523 26 26Z"/>
+              </symbol>
+            </defs>
+          </svg>
+          <!-- Square map plate (Figma 888×888), cropped by the card; markers are placed in % of it -->
+          <div class="map__plate">
+            <img class="map__img" src="assets/map.jpg" alt="" />
+            <svg class="marker" style="--x:20.1%;--y:9.8%;--b:100"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:20.8%;--y:19%;--b:80"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:68.8%;--y:7.1%;--b:60"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:77%;--y:35.8%;--b:40"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:78.9%;--y:23.6%;--b:80"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:45.7%;--y:3.5%;--b:80"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:31%;--y:40.5%;--b:80"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:54.8%;--y:46.5%;--b:60"><use href="#marker"/></svg>
+            <svg class="marker" style="--x:53.5%;--y:22.9%;--b:80"><use href="#marker"/></svg>
+            <span class="map__me" style="--x:42.5%;--y:30.8%"></span>
+          </div>
+          <div class="map__card">
+            <span class="map__car">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M5.6 6.6A2 2 0 0 1 7.5 5.2h9a2 2 0 0 1 1.9 1.4l1.4 4.3A2 2 0 0 1 21 12.7V17a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.3a2 2 0 0 1 1.2-1.8Zm1.8.6-1.1 3.3h11.4l-1.1-3.3ZM7 12.2a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6Zm10 0a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6Z"/></svg>
+            </span>
+            <span class="map__info"><strong>Fiat 500e</strong><span>3 min walk · 84% charged</span></span>
+            <span class="map__go">Book</span>
+          </div>
+        </div>
+        <p class="bento__caption"><strong>Around the corner, parked for free</strong><span>Find a car on the map, end your trip anywhere in a Poppy zone.</span></p>
+      </li>
+
+      <!-- Unlock -->
+      <li class="bento__cell">
+        <div class="bento__visual bento__visual--glow" aria-hidden="true">
+          <span class="unlock">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M7.5 10.5V8a4.5 4.5 0 0 1 8.7-1.6"/><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor"/></svg>
+          </span>
+        </div>
+        <p class="bento__caption"><strong>Your phone is the key</strong><span>No key handover, no desk to queue at.</span></p>
+      </li>
+
+      <!-- Taxi live -->
+      <li class="bento__cell bento__cell--tall">
+        <div class="bento__visual" aria-hidden="true">
+          <div class="ride">
+            <!-- Figma 231:2369: the taxi drives the route toward you -->
+            <div class="ride__map">
+              <svg class="ride__route" viewBox="0 0 183 68" width="183" height="68"><path d="M181.55 55.92l-8.61 9.92c-.74.85-2.09.85-3.01.21-1.65-1.15-4.3-2.37-7.8-2.54-6.35-.3-25.63 0-52.46-7.49a2 2 0 0 1-.65-.34L48.64 6.97a1.9 1.9 0 0 1-.72-1.36c-.45-3.14-3.01-6.96-10.66-2.03a1.2 1.2 0 0 0-.34.3c-.93 1.1-2.38 3.53-2.62 6.53-.09 1.1-.96 2.08-2.07 2.05L.03 11.6" fill="none" stroke="#000" stroke-width="2.43"/></svg>
+              <svg class="ride__you" viewBox="0 0 43 44" width="43" height="44"><defs><radialGradient id="you-glow" cx="21" cy="21.5" r="21.36" gradientUnits="userSpaceOnUse"><stop stop-color="#579dff"/><stop offset="1" stop-color="#57c4ff" stop-opacity="0"/></radialGradient></defs><path fill="url(#you-glow)" d="M.56 27.7A21.36 21.36 0 1 0 41.44 15.3L21 21.5Z"/><circle cx="21" cy="21.5" r="4.97" fill="#0c79fe" stroke="#fff" stroke-width="1.99"/></svg>
+              <span class="ride__stop"></span>
+              <span class="ride__label">1 min</span>
+              <img class="ride__taxi" src="assets/taxi-top.png" alt="" width="11" height="23" />
+            </div>
+            <div class="ride__card">
+              <p class="ride__eta"><strong>4 min</strong><span>away</span></p>
+              <p class="ride__row"><span>Poppy Taxi · Business</span><b>€24.50</b></p>
+              <p class="ride__note">Price fixed before you book</p>
+            </div>
+          </div>
+        </div>
+        <p class="bento__caption"><strong>Rather not drive?</strong><span>Book a taxi in the same app. Price first, then follow it live.</span></p>
+      </li>
+
+      <!-- Fuel -->
+      <li class="bento__cell">
+        <div class="bento__visual" aria-hidden="true">
+          <span class="fuel">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M5 4.5A2.5 2.5 0 0 1 7.5 2h5A2.5 2.5 0 0 1 15 4.5V11h.5a2 2 0 0 1 2 2v3.5a1 1 0 0 0 2 0V9.4l-2.2-2.2a1 1 0 0 1 1.4-1.4l2.5 2.5a1 1 0 0 1 .3.7v7.5a3 3 0 0 1-6 0V13H15v7h.5a1 1 0 1 1 0 2h-11a1 1 0 1 1 0-2H5Zm2.5-.5a.5.5 0 0 0-.5.5V9h6V4.5a.5.5 0 0 0-.5-.5Z"/></svg>
+            Tap Fuel
+          </span>
+        </div>
+        <p class="bento__caption"><strong>Fuel’s on us</strong><span>Fill up for free at partner stations.</span></p>
+      </li>
+
+      <!-- Lease online -->
+      <li class="bento__cell bento__cell--wide">
+        <div class="bento__visual" aria-hidden="true">
+          <div class="browser browser--row">
+            <div class="browser__bar"><i></i><i></i><i></i><span>poppy.be/lease</span></div>
+            <div class="sign">
+              <p class="sign__car"><strong>Peugeot e-208</strong><span>24 months · 15,000 km/year</span></p>
+              <p class="sign__price"><strong>€349</strong>/month</p>
+              <span class="sign__btn">Sign online</span>
+            </div>
+          </div>
+        </div>
+        <p class="bento__caption"><strong>Lease, signed from your sofa</strong><span>Pick a car, a duration and your kilometres. All online, all-in.</span></p>
+      </li>
+
+      <!-- Support -->
+      <li class="bento__cell bento__cell--wide">
+        <div class="bento__visual" aria-hidden="true">
+          <div class="chat">
+            <p class="chat__msg chat__msg--me">Flat tyre on the E40, what do I do?</p>
+            <p class="chat__msg"><img src="assets/avatar-2.png" alt="" />On it. Help is on its way, about 25 min. Stay safe behind the barrier.</p>
+            <span class="chat__badge"><i></i>Emergency line, 24/7</span>
+          </div>
+        </div>
+        <p class="bento__caption"><strong>Real people, fast</strong><span>Live chat on weekdays, an emergency line around the clock.</span></p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Stories: proof for lifestyle, told in numbers. Dock-style row (dock.js): hover magnifies, click opens a portrait into its year -->
+  <section class="stories" aria-labelledby="stories-title">
+    <div class="plans__intro">
+      <h2 class="plans__title" id="stories-title">A year without a car.</h2>
+      <p class="plans__lead">Six Belgians, six very different years. Not one of them misses their car.</p>
+    </div>
+
+    <ul class="dock" data-dock>
+      <li class="dock__item">
+        <img src="assets/market.jpg" alt="" />
+        <div class="dock__info" id="story-1">
+          <p class="dock__tags"><span>Share</span><span>Taxi</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Jonas, 31</strong><span>Antwerp · sold his car in 2024</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>€2,400</strong><span>less than his old car</span></p>
+              <ul class="dock__uses"><li><b>52</b> Share trips</li><li><b>6</b> taxis to the airport</li><li><b>1</b> van for the flea market</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-1">Jonas, 31: see his year</button>
+      </li>
+      <li class="dock__item">
+        <img src="assets/service-share.jpg" alt="" />
+        <div class="dock__info" id="story-2">
+          <p class="dock__tags"><span>Share</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Ines &amp; Tom, 26</strong><span>Ghent · one account for two</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>9</strong><span>days at the coast</span></p>
+              <ul class="dock__uses"><li><b>31</b> Share trips</li><li><b>2</b> festivals</li><li><b>0</b> parking fees</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-2">Ines and Tom, 26: see their year</button>
+      </li>
+      <li class="dock__item">
+        <img src="assets/service-lease.jpg" alt="" />
+        <div class="dock__info" id="story-3">
+          <p class="dock__tags"><span>Lease</span><span>Share</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Karim, 41</strong><span>Brussels · leased in one evening</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>0 h</strong><span>spent at a garage</span></p>
+              <ul class="dock__uses"><li><b>1</b> family car on Lease</li><li><b>3</b> Share vans for the holidays</li><li><b>0</b> calls to an insurer</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-3">Karim, 41: see his year</button>
+      </li>
+      <li class="dock__item">
+        <img src="assets/camping.jpg" alt="" />
+        <div class="dock__info" id="story-4">
+          <p class="dock__tags"><span>Share</span><span>Taxi</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Anouk &amp; Bram, 29</strong><span>Leuven · never owned a car</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>18</strong><span>weekends away</span></p>
+              <ul class="dock__uses"><li><b>4,300</b> km of road trips</li><li><b>11</b> taxis home after dinner</li><li><b>0</b> parking fees</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-4">Anouk and Bram, 29: see their year</button>
+      </li>
+      <li class="dock__item">
+        <img src="assets/picnic.jpg" alt="" />
+        <div class="dock__info" id="story-5">
+          <p class="dock__tags"><span>Share</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Marc, 64</strong><span>Mechelen · sold his car when he retired</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>12</strong><span>picnics in the Ardennes</span></p>
+              <ul class="dock__uses"><li><b>40</b> Sunday markets</li><li><b>12</b> day trips</li><li><b>0</b> insurance bills</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-5">Marc, 64: see his year</button>
+      </li>
+      <li class="dock__item">
+        <img src="assets/service-taxi.jpg" alt="" />
+        <div class="dock__info" id="story-6">
+          <p class="dock__tags"><span>Taxi</span><span>Share</span></p>
+          <div class="dock__bottom">
+            <p class="dock__who"><strong>Hugo, 38</strong><span>Brussels · flies twice a month</span></p>
+            <div class="dock__stats">
+              <p class="dock__big"><strong>24</strong><span>airport runs</span></p>
+              <ul class="dock__uses"><li><b>24</b> taxis, booked the night before</li><li><b>8</b> Share trips</li><li><b>0</b> missed flights</li></ul>
+            </div>
+          </div>
+        </div>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-6">Hugo, 38: see his year</button>
+      </li>
+    </ul>
+    <p class="dock__hint">Pick a portrait to see their year.</p>
+  </section>
+
+  <!-- Finale (finale.js): a pinned wall of Poppy moments zooms out as you scroll,
+       then fades away to reveal the download block in the middle -->
+  <section class="finale" aria-labelledby="closing-title" data-finale>
+    <span class="finale__end" id="download"></span>
+    <div class="finale__stage">
+      <div class="finale__wall" aria-hidden="true">
+        <span class="finale__tile"><img src="assets/camping.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/market.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/driver.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/hero.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/driver.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/hero.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/camping.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/hero.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/camping.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile finale__tile--brand"><img src="assets/logo.svg" alt="" width="103" height="22" /></span>
+        <span class="finale__tile"><img src="assets/market.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/driver.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/market.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/driver.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/hero.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/hero.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/camping.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" loading="lazy" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/market.jpg" alt="" loading="lazy" decoding="async" /></span>
+      </div>
+
+      <div class="closing">
+        <div class="closing__icon" aria-hidden="true" data-tilt data-qr>
+          <img src="assets/logo.svg" alt="" width="103" height="22" />
+          <span class="service__glare"></span>
+        </div>
+        <h2 class="closing__title" id="closing-title">Sell your car.<br />Keep your plans.</h2>
+        <div class="closing__ctas">
+          <a class="btn btn--md btn--dark" href="#">Get the app</a>
+          <a class="btn btn--md btn--outline" href="#">Build your lease online</a>
+        </div>
+        <p class="closing__note">Sign up in 2 minutes. No subscription, you pay when you drive.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__origin">© 2026 Poppy. Made in <span class="flag" role="img" aria-label="Belgian flag"><i></i><i></i><i></i></span> <strong>Belgium</strong></p>
+    <ul class="footer__links">
+      <li><a href="#">Share</a></li>
+      <li><a href="#">Lease</a></li>
+      <li><a href="#">Taxi</a></li>
+      <li><a href="#">Business</a></li>
+      <li><a href="#">Journal</a></li>
+      <li><a href="#">Help centre</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </footer>
+
+  <!-- Floating nav (nav.js): appears once the hero header has scrolled away -->
+  <nav class="pill" aria-label="Quick navigation" data-pill>
+    <div class="pill__bar">
+      <a class="pill__logo" href="#top" aria-label="Poppy, back to top"><img src="assets/logo.svg" alt="" width="62" height="13" /></a>
+      <a class="pill__cta" href="#download">Get the app</a>
+      <button class="pill__toggle" type="button" aria-expanded="false" aria-controls="pill-menu" aria-label="Menu"><i></i><i></i></button>
+    </div>
+    <ul class="pill__menu" id="pill-menu">
+      <li><a href="#"><span class="pill__title"><i class="shape shape--circle"></i>Share</span><span class="pill__desc">A car nearby, by the minute or the day.</span></a></li>
+      <li><a href="#"><span class="pill__title"><i class="shape shape--square"></i>Lease</span><span class="pill__desc">Your own car, signed online.</span></a></li>
+      <li><a href="#"><span class="pill__title"><i class="shape shape--triangle"></i>Taxi</span><span class="pill__desc">A ride with the price up front.</span></a></li>
+      <li><a href="#"><span class="pill__title"><i class="shape shape--pill"></i>Business</span><span class="pill__desc">Cars and rides for your team.</span></a></li>
+      <li><a href="#platform-title"><span class="pill__title"><i class="shape shape--diamond"></i>How it works</span><span class="pill__desc">Unlock, drive, park, done.</span></a></li>
+      <li><a href="#stories-title"><span class="pill__title"><i class="shape shape--circle shape--soft"></i>Stories</span><span class="pill__desc">Six Belgians, a year without a car.</span></a></li>
+      <li><a href="#"><span class="pill__title"><i class="shape shape--square shape--soft"></i>Help centre</span><span class="pill__desc">Real people, and a 24/7 emergency line.</span></a></li>
+      <li><a href="#download"><span class="pill__title"><i class="shape shape--pill shape--soft"></i>Download</span><span class="pill__desc">iOS and Android, free to sign up.</span></a></li>
+    </ul>
+  </nav>
+  <script src="reveal.js" defer></script>
+  <script src="tilt.js" defer></script>
+  <script src="dock.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="qr.js" defer></script>
+  <script src="finale.js" defer></script>
+</body>
+</html>
