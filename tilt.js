@@ -8,11 +8,12 @@
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   // Tuning
-  const MAX_TILT = 7;   // degrees at the card's edge
-  const SHIFT = 12;     // px the photo drifts against the tilt
-  const EASE = 0.12;    // per-frame smoothing, lower = floatier
+  const CARD = { tilt: 4, shift: 6 };  // service cards: degrees at the edge, px the photo drifts
+  const ICON = { tilt: 7, shift: 12 }; // closing app icon
+  const EASE = 0.08;    // per-frame smoothing, lower = floatier
 
   document.querySelectorAll(".service, [data-tilt]").forEach((card) => {
+    const { tilt: MAX_TILT, shift: SHIFT } = card.hasAttribute("data-tilt") ? ICON : CARD;
     const target = { rx: 0, ry: 0, px: 0, py: 0, gx: 50, gy: 50, glare: 0 };
     const cur = { ...target };
     let raf = 0;

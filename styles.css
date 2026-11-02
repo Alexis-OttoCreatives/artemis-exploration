@@ -29,26 +29,6 @@ html { scroll-behavior: smooth; }
 ul { list-style: none; margin: 0; padding: 0; }
 h1, h2, p { margin: 0; }
 
-/* Concept label: always visible, so the page is never taken for the real site */
-.concept-label {
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
-  z-index: 60;
-  max-width: calc(100vw - 32px);
-  padding: 8px 12px;
-  border-radius: 8px;
-  corner-shape: squircle;
-  background: rgba(19, 22, 23, .82);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  color: var(--white);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  pointer-events: none;
-}
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -68,7 +48,8 @@ h1, h2, p { margin: 0; }
 /* Hero */
 .hero {
   position: relative;
-  min-height: 95svh; /* settles here after the load intro, so the next section peeks in */
+  min-height: 100vh;
+  min-height: 100dvh; /* the visible screen height, also when mobile toolbars hide */
   display: flex;
   flex-direction: column;
   color: var(--white);
@@ -83,18 +64,15 @@ h1, h2, p { margin: 0; }
   z-index: -1;
 }
 
-/* Load intro: the hero starts at full screen height, then shrinks to its own
-   height while the photo settles from a slight zoom; the nav drops in, the
+/* Load intro: the photo settles from a slight zoom, the nav drops in, the
    title rises line by line and the CTA follows. */
 :root {
-  --intro-shrink: .35s;  /* when the hero starts shrinking */
+  --intro-shrink: .35s;  /* when the photo starts settling */
   --intro-ui: 1.05s;     /* when the nav starts appearing */
   --intro-title: 1.2s;   /* when the first title line rises */
   --intro-cta: 1.55s;    /* when the button and social proof come up */
 }
-.hero { animation: hero-shrink 1.15s cubic-bezier(.7, 0, .2, 1) var(--intro-shrink) both; }
 .hero__bg { animation: hero-settle 1.4s cubic-bezier(.7, 0, .2, 1) var(--intro-shrink) both; }
-@keyframes hero-shrink { from { min-height: 100svh; } }
 @keyframes hero-settle { from { transform: scale(1.08); } }
 .header__origin,
 .header .nav li,
@@ -113,7 +91,7 @@ h1, h2, p { margin: 0; }
 @keyframes line-up { from { transform: translateY(110%); } }
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } }
 @media (prefers-reduced-motion: reduce) {
-  .hero, .hero__bg,
+  .hero__bg,
   .header__origin, .header .nav li, .header__cta, .header .logo,
   .hero__title .line > span,
   .hero__bottom > * { animation: none; }
@@ -360,7 +338,7 @@ h1, h2, p { margin: 0; }
   transition: box-shadow .5s ease;
   will-change: transform;
 }
-.service.is-tilting { box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .35); }
+.service.is-tilting { box-shadow: 0 20px 40px -20px rgba(0, 0, 0, .2); }
 .service::after {
   content: "";
   position: absolute;
@@ -394,12 +372,13 @@ h1, h2, p { margin: 0; }
   letter-spacing: -0.0625em; /* -1px @ 16px */
   white-space: nowrap;
 }
+.service__tag b { font-weight: 600; } /* the service name stands out from "Poppy" */
 /* Soft light that follows the cursor */
 .service__glare {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, .22), rgba(255, 255, 255, 0) 55%);
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, .12), rgba(255, 255, 255, 0) 55%);
   mix-blend-mode: soft-light;
   opacity: var(--glare, 0);
 }
@@ -1069,9 +1048,9 @@ h1, h2, p { margin: 0; }
   padding: 4px;
   border-radius: 40px;
   background: rgba(255, 255, 255, .82);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  backdrop-filter: blur(16px) saturate(1.4);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .06), 0 10px 30px -10px rgba(0, 0, 0, .2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .06), 0 10px 15px rgba(0, 0, 0, .2);
 }
 .pill__logo {
   display: grid;
@@ -1129,7 +1108,7 @@ h1, h2, p { margin: 0; }
   translate: -50% 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: min(520px, calc(100vw - 32px));
+  width: min(528px, calc(100vw - 32px));
   pointer-events: auto;
   border-radius: 12px; corner-shape: squircle;
   background: #fff;
@@ -1150,24 +1129,35 @@ h1, h2, p { margin: 0; }
 .pill__menu a {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   height: 100%;
   padding: 16px 18px;
   text-align: left;
   transition: background-color .2s;
 }
 .pill__menu a:hover { background: #f7f7f7; }
-.pill__title { display: flex; align-items: center; gap: 10px; font-size: 15px; letter-spacing: -0.03em; }
-.pill__desc { padding-left: 20px; font-size: 13px; font-weight: 400; line-height: 1.4; color: var(--grey); }
+.pill__title { font-size: 16px; letter-spacing: -0.03em; }
+.pill__desc { font-size: 12px; font-weight: 400; line-height: 1.4; color: var(--grey); }
 
-/* Little brand shapes for the menu (Dabbit-style markers, Poppy colours) */
-.shape { flex: none; width: 10px; height: 10px; background: var(--red); }
-.shape--circle { border-radius: 50%; }
-.shape--square { border-radius: 2px; corner-shape: squircle; }
-.shape--pill { width: 12px; height: 6px; border-radius: 6px; }
-.shape--diamond { width: 8px; height: 8px; border-radius: 1px; corner-shape: squircle; rotate: 45deg; }
-.shape--triangle { width: 11px; height: 10px; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
-.shape--soft { background: var(--ink); }
+/* Full-width last row with the QR code to scan from the desktop */
+.pill__download { position: relative; grid-column: 1 / -1; border-right: 0 !important; }
+.pill__download a { justify-content: center; min-height: 120px; padding-block: 40px; }
+.pill__qr {
+  position: absolute;
+  top: 50%;
+  right: 88px;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 24%;
+  corner-shape: squircle;
+  background: #f7f3f2;
+  box-shadow: 0 0 0 .5px rgba(0, 0, 0, .06), 0 15px 30px -12px rgba(0, 0, 0, .25);
+  pointer-events: none;
+}
+.pill__qr svg { display: block; width: 72%; height: auto; }
 
 @media (max-width: 480px) {
   .pill__menu { grid-template-columns: 1fr; }
@@ -1175,7 +1165,9 @@ h1, h2, p { margin: 0; }
   .pill__menu li:nth-child(n + 2) { border-top: 1px solid #efefef; }
   .pill__desc { display: none; }
   .pill__menu a { padding: 14px 18px; }
+  .pill__download a { min-height: 0; padding-block: 14px; }
 }
+@media (hover: none) { .pill__qr { display: none; } }
 @media (prefers-reduced-motion: reduce) {
   .pill, .pill__menu, .pill__toggle i { transition-duration: .01s; }
 }

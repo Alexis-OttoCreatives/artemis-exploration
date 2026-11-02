@@ -7,11 +7,10 @@
   <title>Poppy website concept · Otto Creatives</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <p class="concept-label">Design concept by Otto Creatives · Not the official Poppy website</p>
   <!-- Hero -->
   <section class="hero" id="top">
     <div class="hero__bg" aria-hidden="true"></div>
@@ -44,7 +43,7 @@
     <div class="hero__content">
       <h1 class="hero__title"><span class="line"><span style="--d:0">The best alternative</span></span><span class="line"><span style="--d:1">to owning a car.</span></span></h1>
       <div class="hero__bottom">
-        <a class="btn btn--lg" href="#" style="--d:0">Make the change</a>
+        <a class="btn btn--lg" href="#plans-title" style="--d:0">Find your Poppy</a>
         <div class="social-proof" style="--d:1">
           <div class="avatars" aria-hidden="true">
             <img src="assets/avatar-1.png" alt="" />
@@ -58,21 +57,21 @@
   </section>
 
   <!-- A car for every plan -->
-  <section class="plans">
+  <section class="plans" aria-labelledby="plans-title">
     <div class="plans__intro">
-      <h2 class="plans__title">A car for every plan, big or small.</h2>
+      <h2 class="plans__title" id="plans-title">A car for every plan, big or small.</h2>
       <p class="plans__lead">Hop into a shared car for 15 minutes or a whole weekend, or lease one to call your own. And when you’d rather not drive, we’ll send a taxi.</p>
     </div>
 
     <!-- Each row: data-image + data-caption feed the floating reveal (reveal.js).
-         Four photos for six rows, so market + driver are used twice (never on neighbouring rows). -->
+         Six different photos, none of them reused in the services or stories. -->
     <ul class="plans__questions" data-reveal>
-      <li data-image="assets/market.jpg" data-caption="1 hour, 12 km">New plant, no way to get it home?</li>
-      <li data-image="assets/driver.jpg" data-caption="Leased, 24 months">New job, longer commute?</li>
-      <li data-image="assets/picnic.jpg" data-caption="14 days, 2,100 km">2 weeks in France?</li>
-      <li data-image="assets/market.jpg" data-caption="30 min, 8 km">Quick ride to your friends?</li>
-      <li data-image="assets/camping.jpg" data-caption="2 days, 250 km">2 nights camping?</li>
-      <li data-image="assets/driver.jpg" data-caption="Taxi, 5:00 am">Flight at 6am?</li>
+      <li data-image="assets/people/person-03.jpg" data-caption="1 hour, 12 km">New plant, no way to get it home?</li>
+      <li data-image="assets/people/person-04.jpg" data-caption="Leased, 24 months">New job, longer commute?</li>
+      <li data-image="assets/people/person-05.jpg" data-caption="14 days, 2,100 km">2 weeks in France?</li>
+      <li data-image="assets/people/person-02.jpg" data-caption="30 min, 8 km">Quick ride to your friends?</li>
+      <li data-image="assets/people/person-06.jpg" data-caption="2 days, 250 km">2 nights camping?</li>
+      <li data-image="assets/people/person-01.jpg" data-caption="Taxi, 5:00 am">Flight at 6am?</li>
     </ul>
   </section>
 
@@ -84,7 +83,7 @@
       <li>
         <a class="service" href="#">
           <img class="service__img" src="assets/service-share.jpg" alt="" />
-          <span class="service__tag" aria-hidden="true">Poppy Share</span>
+          <span class="service__tag" aria-hidden="true">Poppy <b>Share</b></span>
           <span class="service__glare" aria-hidden="true"></span>
           <span class="service__btn" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
@@ -98,7 +97,7 @@
       <li>
         <a class="service" href="#">
           <img class="service__img" src="assets/service-lease.jpg" alt="" />
-          <span class="service__tag" aria-hidden="true">Poppy Lease</span>
+          <span class="service__tag" aria-hidden="true">Poppy <b>Lease</b></span>
           <span class="service__glare" aria-hidden="true"></span>
           <span class="service__btn" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
@@ -112,7 +111,7 @@
       <li>
         <a class="service" href="#">
           <img class="service__img" src="assets/service-taxi.jpg" alt="" />
-          <span class="service__tag" aria-hidden="true">Poppy Taxi</span>
+          <span class="service__tag" aria-hidden="true">Poppy <b>Taxi</b></span>
           <span class="service__glare" aria-hidden="true"></span>
           <span class="service__btn" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M5 13h11.86l-3.63 4.36a1 1 0 0 0 1.54 1.28l5-6 .09-.15.07-.13A1 1 0 0 0 20 12a1 1 0 0 0-.07-.36l-.07-.13-.09-.15-5-6A1 1 0 0 0 14 5a1 1 0 0 0-.77 1.64L16.86 11H5a1 1 0 0 0 0 2Z"/></svg>
@@ -255,7 +254,7 @@
 
     <ul class="dock" data-dock>
       <li class="dock__item">
-        <img src="assets/market.jpg" alt="" />
+        <img src="assets/people/person-09.jpg" alt="" />
         <div class="dock__info" id="story-1">
           <p class="dock__tags"><span>Share</span><span>Taxi</span></p>
           <div class="dock__bottom">
@@ -269,7 +268,7 @@
         <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-1">Jonas, 31: see his year</button>
       </li>
       <li class="dock__item">
-        <img src="assets/service-share.jpg" alt="" />
+        <img src="assets/people/person-07.jpg" alt="" />
         <div class="dock__info" id="story-2">
           <p class="dock__tags"><span>Share</span></p>
           <div class="dock__bottom">
@@ -283,7 +282,7 @@
         <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-2">Ines and Tom, 26: see their year</button>
       </li>
       <li class="dock__item">
-        <img src="assets/service-lease.jpg" alt="" />
+        <img src="assets/people/person-11.jpg" alt="" />
         <div class="dock__info" id="story-3">
           <p class="dock__tags"><span>Lease</span><span>Share</span></p>
           <div class="dock__bottom">
@@ -325,18 +324,18 @@
         <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-5">Marc, 64: see his year</button>
       </li>
       <li class="dock__item">
-        <img src="assets/service-taxi.jpg" alt="" />
+        <img src="assets/people/person-10.jpg" alt="" />
         <div class="dock__info" id="story-6">
           <p class="dock__tags"><span>Taxi</span><span>Share</span></p>
           <div class="dock__bottom">
-            <p class="dock__who"><strong>Hugo, 38</strong><span>Brussels · flies twice a month</span></p>
+            <p class="dock__who"><strong>Lien, 38</strong><span>Brussels · flies twice a month</span></p>
             <div class="dock__stats">
               <p class="dock__big"><strong>24</strong><span>airport runs</span></p>
               <ul class="dock__uses"><li><b>24</b> taxis, booked the night before</li><li><b>8</b> Share trips</li><li><b>0</b> missed flights</li></ul>
             </div>
           </div>
         </div>
-        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-6">Hugo, 38: see his year</button>
+        <button class="dock__hit" type="button" aria-expanded="false" aria-controls="story-6">Lien, 38: see her year</button>
       </li>
     </ul>
     <p class="dock__hint">Pick a portrait to see their year.</p>
@@ -348,83 +347,83 @@
     <span class="finale__end" id="download"></span>
     <div class="finale__stage">
       <div class="finale__wall" aria-hidden="true">
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-01.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-02.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-03.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-04.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-05.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-06.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-07.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-08.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-11.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-05.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-06.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-07.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-08.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-11.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-11.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-01.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-02.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile finale__tile--brand"><img src="assets/logo.svg" alt="" width="103" height="22" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-02.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-03.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-04.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-05.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-06.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-01.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-02.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-03.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-04.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-05.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-06.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-07.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-08.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-04.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-05.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-06.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-07.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-08.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-11.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-08.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-09.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-10.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-11.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
         <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-lease.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/hero.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-taxi.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/camping.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/service-share.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/market.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/driver.jpg" alt="" decoding="async" /></span>
-        <span class="finale__tile"><img src="assets/picnic.jpg" alt="" decoding="async" /></span>
+        <span class="finale__tile"><img src="assets/people/person-01.jpg" alt="" decoding="async" /></span>
       </div>
 
       <div class="closing">
@@ -464,14 +463,15 @@
       <button class="pill__toggle" type="button" aria-expanded="false" aria-controls="pill-menu" aria-label="Menu"><i></i><i></i></button>
     </div>
     <ul class="pill__menu" id="pill-menu">
-      <li><a href="#"><span class="pill__title"><i class="shape shape--circle"></i>Share</span><span class="pill__desc">A car nearby, by the minute or the day.</span></a></li>
-      <li><a href="#"><span class="pill__title"><i class="shape shape--square"></i>Lease</span><span class="pill__desc">Your own car, signed online.</span></a></li>
-      <li><a href="#"><span class="pill__title"><i class="shape shape--triangle"></i>Taxi</span><span class="pill__desc">A ride with the price up front.</span></a></li>
-      <li><a href="#"><span class="pill__title"><i class="shape shape--pill"></i>Business</span><span class="pill__desc">Cars and rides for your team.</span></a></li>
-      <li><a href="#platform-title"><span class="pill__title"><i class="shape shape--diamond"></i>How it works</span><span class="pill__desc">Unlock, drive, park, done.</span></a></li>
-      <li><a href="#stories-title"><span class="pill__title"><i class="shape shape--circle shape--soft"></i>Stories</span><span class="pill__desc">Six Belgians, a year without a car.</span></a></li>
-      <li><a href="#"><span class="pill__title"><i class="shape shape--square shape--soft"></i>Help centre</span><span class="pill__desc">Real people, and a 24/7 emergency line.</span></a></li>
-      <li><a href="#download"><span class="pill__title"><i class="shape shape--pill shape--soft"></i>Download</span><span class="pill__desc">iOS and Android, free to sign up.</span></a></li>
+      <li><a href="#"><span class="pill__title">Share</span><span class="pill__desc">A car nearby, by the minute or the day.</span></a></li>
+      <li><a href="#"><span class="pill__title">Lease</span><span class="pill__desc">Your own car, signed online.</span></a></li>
+      <li><a href="#"><span class="pill__title">Taxi</span><span class="pill__desc">A ride with the price up front.</span></a></li>
+      <li><a href="#"><span class="pill__title">Help centre</span><span class="pill__desc">Real people, and a 24/7 emergency line.</span></a></li>
+      <li class="pill__download">
+        <a href="#download"><span class="pill__title">Download the app</span><span class="pill__desc">iOS and Android, free to sign up.</span></a>
+        <!-- Same code as the closing icon's hover state (qr.js): https://poppy.be, placeholder -->
+        <span class="pill__qr" aria-hidden="true"><svg viewBox="0 0 25 25" shape-rendering="crispEdges"><path fill="#131617" d="M0 0h7v1h-7zM9 0h3v1h-3zM13 0h2v1h-2zM16 0h1v1h-1zM18 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h3v1h-3zM12 1h1v1h-1zM14 1h2v1h-2zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h1v1h-1zM13 2h2v1h-2zM16 2h1v1h-1zM18 2h1v1h-1zM20 2h3v1h-3zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM13 3h3v1h-3zM18 3h1v1h-1zM20 3h3v1h-3zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM14 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM20 4h3v1h-3zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM13 5h1v1h-1zM15 5h2v1h-2zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h7v1h-7zM9 7h2v1h-2zM12 7h5v1h-5zM0 8h1v1h-1zM2 8h1v1h-1zM4 8h1v1h-1zM6 8h1v1h-1zM11 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM20 8h1v1h-1zM23 8h1v1h-1zM1 9h1v1h-1zM3 9h2v1h-2zM7 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM14 9h1v1h-1zM16 9h3v1h-3zM24 9h1v1h-1zM4 10h6v1h-6zM13 10h1v1h-1zM16 10h2v1h-2zM20 10h1v1h-1zM22 10h3v1h-3zM5 11h1v1h-1zM7 11h1v1h-1zM18 11h2v1h-2zM23 11h1v1h-1zM2 12h2v1h-2zM5 12h2v1h-2zM10 12h3v1h-3zM16 12h4v1h-4zM21 12h1v1h-1zM23 12h2v1h-2zM2 13h2v1h-2zM7 13h1v1h-1zM9 13h5v1h-5zM16 13h1v1h-1zM18 13h1v1h-1zM21 13h1v1h-1zM24 13h1v1h-1zM0 14h1v1h-1zM3 14h2v1h-2zM6 14h2v1h-2zM9 14h4v1h-4zM14 14h1v1h-1zM16 14h1v1h-1zM18 14h2v1h-2zM22 14h3v1h-3zM1 15h5v1h-5zM7 15h1v1h-1zM10 15h1v1h-1zM12 15h3v1h-3zM16 15h2v1h-2zM20 15h1v1h-1zM23 15h1v1h-1zM0 16h1v1h-1zM5 16h2v1h-2zM8 16h2v1h-2zM11 16h1v1h-1zM14 16h8v1h-8zM8 17h4v1h-4zM14 17h3v1h-3zM20 17h2v1h-2zM23 17h2v1h-2zM0 18h7v1h-7zM9 18h1v1h-1zM13 18h1v1h-1zM15 18h2v1h-2zM18 18h1v1h-1zM20 18h2v1h-2zM23 18h2v1h-2zM0 19h1v1h-1zM6 19h1v1h-1zM9 19h3v1h-3zM15 19h2v1h-2zM20 19h2v1h-2zM23 19h1v1h-1zM0 20h1v1h-1zM2 20h3v1h-3zM6 20h1v1h-1zM8 20h3v1h-3zM12 20h1v1h-1zM16 20h6v1h-6zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h3v1h-3zM6 21h1v1h-1zM9 21h5v1h-5zM19 21h4v1h-4zM0 22h1v1h-1zM2 22h3v1h-3zM6 22h1v1h-1zM8 22h5v1h-5zM14 22h1v1h-1zM17 22h1v1h-1zM20 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h2v1h-2zM12 23h3v1h-3zM16 23h2v1h-2zM20 23h2v1h-2zM23 23h1v1h-1zM0 24h7v1h-7zM8 24h2v1h-2zM11 24h1v1h-1zM14 24h3v1h-3zM18 24h2v1h-2zM23 24h2v1h-2z"/></svg></span>
+      </li>
     </ul>
   </nav>
   <script src="reveal.js" defer></script>
@@ -480,5 +480,6 @@
   <script src="nav.js" defer></script>
   <script src="qr.js" defer></script>
   <script src="finale.js" defer></script>
+  <script src="scroll.js" defer></script>
 </body>
 </html>
