@@ -413,6 +413,24 @@ h1, h2, p { margin: 0; }
   .service__name,
   .service__title { white-space: nowrap; }
 }
+/* Variant: ?services=shrink brings back the earlier accordion hover instead of
+   the 3D tilt. The hovered card widens by ~20%, the other two give up the space
+   and hide their copy (it never wraps mid-animation). */
+@media (min-width: 901px) and (hover: hover) {
+  .services-shrink .services__list li { transition: flex-grow .7s cubic-bezier(.22, 1, .36, 1); }
+  .services-shrink .services__list li:hover { flex-grow: 765; }
+  .services-shrink .services__list li:last-child:hover { flex-grow: 563; }
+  .services-shrink .service { transform: none; will-change: auto; }
+  .services-shrink .service__glare { display: none; }
+  .services-shrink .service__img { transform: none; transition: transform .8s cubic-bezier(.22, 1, .36, 1); }
+  .services-shrink .service:hover .service__img { transform: scale(1.04); }
+  .services-shrink .service__text,
+  .services-shrink .service__btn { transition: opacity .3s ease .12s; }
+  .services-shrink .services__list:has(li:hover) li:not(:hover) :is(.service__text, .service__btn) {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+}
 .service:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 
 /* Below tablet: swipeable row of cards */
@@ -720,7 +738,7 @@ h1, h2, p { margin: 0; }
 .sign__car strong { font-size: 18px; font-weight: 500; }
 .sign__car span, .sign__price { font-weight: 400; color: var(--grey); }
 .sign__price strong { font-size: 22px; font-weight: 500; color: var(--ink); letter-spacing: -0.05em; }
-.sign__btn { padding: 10px 16px; border-radius: 40px; background: var(--red); color: var(--white); white-space: nowrap; }
+.sign__btn { padding: 10px 16px; border-radius: 40px; background: #1a3967; color: var(--white); white-space: nowrap; }
 
 /* Support chat */
 .chat {

@@ -12,7 +12,9 @@
   const ICON = { tilt: 7, shift: 12 }; // closing app icon
   const EASE = 0.08;    // per-frame smoothing, lower = floatier
 
-  document.querySelectorAll(".service, [data-tilt]").forEach((card) => {
+  // ?services=shrink swaps the service tilt for the accordion hover (styles.css)
+  const cards = document.documentElement.classList.contains("services-shrink") ? "[data-tilt]" : ".service, [data-tilt]";
+  document.querySelectorAll(cards).forEach((card) => {
     const { tilt: MAX_TILT, shift: SHIFT } = card.hasAttribute("data-tilt") ? ICON : CARD;
     const target = { rx: 0, ry: 0, px: 0, py: 0, gx: 50, gy: 50, glare: 0 };
     const cur = { ...target };
